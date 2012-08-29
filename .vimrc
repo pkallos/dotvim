@@ -1,3 +1,4 @@
+syntax on
 set ignorecase
 set number
 set backspace=indent,eol,start
