@@ -6,6 +6,7 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set t_Co=256
 if has("autocmd")
     " Drupal *.module and *.install files.
     augroup module
