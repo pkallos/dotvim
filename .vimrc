@@ -28,3 +28,4 @@ set wildmenu
 colorscheme jellybeans
 
 autocmd BufWritePre * :%s/\s\+$//e
+set pastetoggle=<F2>
