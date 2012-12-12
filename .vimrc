@@ -1,3 +1,4 @@
+set rtp+=$GOROOT/misc/vim
 syntax on
 set ignorecase
 set number
@@ -34,3 +35,4 @@ set wildmenu
 colorscheme jellybeans
 
 autocmd BufWritePre * :%s/\s\+$//e
+set pastetoggle=<F2>
