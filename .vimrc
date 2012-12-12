@@ -1,3 +1,4 @@
+set rtp+=$GOROOT/misc/vim
 syntax on
 set ignorecase
 set number
