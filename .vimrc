@@ -22,6 +22,11 @@ if has("autocmd")
 endif
 
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+nnoremap <F2> :set nonumber!<CR>
+
+nnoremap <F3> :set invpaste paste?<CR>
+set pastetoggle=<F3>
+set showmode
 
 set tags=tags
 set wildmode=longest,list,full
