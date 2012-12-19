@@ -27,6 +27,12 @@ nnoremap <F2> :set nonumber!<CR>
 
 nnoremap <F3> :set invpaste paste?<CR>
 set pastetoggle=<F3>
+inoremap <Left>  <NOP>
+inoremap <Right> <NOP>
+inoremap <Up>    <NOP>
+inoremap <Down>  <NOP>
+inoremap kj <Esc>
+
 set showmode
 
 set tags=tags
