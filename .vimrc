@@ -1,13 +1,24 @@
+set nocompatible
 " Include GOROOT as path
 set rtp+=$GOROOT/misc/vim
 " Syntax highlighting
 syntax on
 " Ignore case in searches
 set ignorecase
+" Highlight dynamically as pattern is typed
+set incsearch
+" Highlight searches
+set hlsearch
 " Number lines by default
 set number
 " Allow backspace in insert mode
 set backspace=indent,eol,start
+" Highlight current line
+set cursorline
+" Don't cry for me
+set visualbell
+" Don't cry for me
+set visualbell
 
 " Use 4 space soft tabs, autoindent
 set smartindent
@@ -51,6 +62,14 @@ set pastetoggle=<F3>
 
 " Show current mode
 set showmode
+" Show the title in the current window
+set title
+" Start scrolling three lines before the horizontal window border
+set scrolloff=3
+" Disable error bells
+set noerrorbells
+" Show the cursor position
+set ruler
 
 " Use tags in current dir
 set tags=tags
@@ -58,6 +77,11 @@ set tags=tags
 " Impove tab completion
 set wildmode=longest,list,full
 set wildmenu
+
+" Allow cursor keys in insert mode
+set esckeys
+
+" Colors!
 colorscheme jellybeans
 
 " Strip trailing whitespace
