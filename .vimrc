@@ -17,6 +17,13 @@ set expandtab
 " Use 256 colors
 set t_Co=256
 
+" Centralize backups, swapfiles and undo history
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+if exists("&undodir")
+    set undodir=~/.vim/undo
+endif
+
 " Syntax highlighting for Drupal filetypes
 if has("autocmd")
     " Drupal *.module and *.install files.
