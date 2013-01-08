@@ -3,3 +3,4 @@ Makefile
 .last_*
 ruby/
 .VimballRecord
+swaps
