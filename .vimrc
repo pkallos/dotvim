@@ -53,6 +53,12 @@ endif
 " Open tag in new tab
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! %!sudo tee > /dev/null %
+
+" Select pasted text
+nnoremap gp `[v`]
+
 " Toggle line numbers with F2
 nnoremap <F2> :set nonumber!<CR>
 
