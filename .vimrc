@@ -87,6 +87,9 @@ set wildmenu
 " Allow cursor keys in insert mode
 set esckeys
 
+" Always show status line
+set laststatus=2
+
 " Colors!
 colorscheme jellybeans
 
@@ -99,3 +102,14 @@ function! StripWhitespace()
     call setreg('/', old_query)
 endfunction
 autocmd BufWritePre * :call StripWhitespace()
+
+" Get real with multibyte
+if has("multi_byte")
+  if &termencoding == ""
+    let &termencoding = &encoding
+  endif
+  set encoding=utf-8
+  setglobal fileencoding=utf-8
+  "setglobal bomb
+  set fileencodings=ucs-bom,utf-8,latin1
+endif
