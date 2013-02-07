@@ -6,7 +6,7 @@ set rtp+=$GOROOT/misc/vim
 " Syntax highlighting
 
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+execute vundle#rc()
 
 " let Vundle manage Vundle
 " required!
@@ -124,3 +124,6 @@ if has("multi_byte")
   "setglobal bomb
   set fileencodings=ucs-bom,utf-8,latin1
 endif
+
+let g:dbgPavimPort = 9000
+let g:dbgPavimBreakAtEntry = 0
