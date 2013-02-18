@@ -5,13 +5,13 @@ set nocompatible
 set rtp+=$GOROOT/misc/vim
 " Syntax highlighting
 
-set rtp+=~/.vim/bundle/vundle/
-execute vundle#rc()
+" set rtp+=~/.vim/bundle/vundle/
+" execute vundle#rc()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'gmarik/vundle'
+" Bundle 'Valloric/YouCompleteMe'
 
 syntax on
 " Ignore case in searches
