@@ -1,17 +1,21 @@
-execute pathogen#infect()
-
 set nocompatible
+filetype off
 " Include GOROOT as path
 set rtp+=$GOROOT/misc/vim
 " Syntax highlighting
+set rtp+=/.vim/bundle/ctrlp.vim
 
 set rtp+=~/.vim/bundle/vundle/
-execute vundle#rc()
+call vundle#rc()
 
 " let Vundle manage Vundle
 " required!
 Bundle 'gmarik/vundle'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'kien/ctrlp.vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'ack.vim'
+Bundle 'surround.vim'
 
 syntax on
 " Ignore case in searches
