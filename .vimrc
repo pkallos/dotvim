@@ -4,7 +4,6 @@ filetype off
 set rtp+=$GOROOT/misc/vim
 " Syntax highlighting
 set rtp+=/.vim/bundle/ctrlp.vim
-
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
