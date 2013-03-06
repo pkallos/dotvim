@@ -13,6 +13,8 @@ Bundle 'gmarik/vundle'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
+Bundle 'brookhong/DBGPavim'
+Bundle 'airblade/vim-gitgutter'
 Bundle 'ack.vim'
 Bundle 'surround.vim'
 
@@ -98,6 +100,10 @@ set tags=tags
 set wildmode=longest,list,full
 set wildmenu
 
+" Bind ctrl left and ctrl right to tabn tabp
+nnoremap <Esc>[5D gT
+nnoremap <Esc>[5C gt
+
 " Allow cursor keys in insert mode
 set esckeys
 
@@ -128,5 +134,14 @@ if has("multi_byte")
   set fileencodings=ucs-bom,utf-8,latin1
 endif
 
+" Debug port
 let g:dbgPavimPort = 9000
 let g:dbgPavimBreakAtEntry = 0
+
+" Auto reload files on disk
+set autoread
+
+" Gitgutter on
+let g:gitgutter_enabled = 1
+nnoremap <Leader>n :GitGutterNextHunk<CR>
+nnoremap <Leader>p :GitGutterPrevHunk<CR>
