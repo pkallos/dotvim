@@ -11,8 +11,11 @@ call vundle#rc()
 " required!
 Bundle 'gmarik/vundle'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'fholgado/minibufexpl.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-repeat'
+Bundle 'vim-scripts/swap-parameters'
 Bundle 'brookhong/DBGPavim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'ack.vim'
@@ -67,7 +70,7 @@ if has("autocmd")
 endif
 
 " Open tag in new tab
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+" map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! %!sudo tee > /dev/null %
@@ -100,9 +103,15 @@ set tags=tags
 set wildmode=longest,list,full
 set wildmenu
 
-" Bind ctrl left and ctrl right to tabn tabp
-nnoremap <Esc>[5D gT
-nnoremap <Esc>[5C gt
+" Set hidden?
+set hidden
+
+" Bind ctrl-h and ctrl-j to tabn tabp
+nnoremap <C-h> :bp<CR>
+nnoremap <C-l> :bn<CR>
+
+" Close with C-q
+nnoremap <C-x> :bd<CR>:bp<CR>
 
 " Allow cursor keys in insert mode
 set esckeys
