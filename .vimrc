@@ -18,6 +18,8 @@ Bundle 'tpope/vim-repeat'
 Bundle 'vim-scripts/swap-parameters'
 Bundle 'brookhong/DBGPavim'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'godlygeek/tabular'
 Bundle 'ack.vim'
 Bundle 'surround.vim'
 
@@ -111,7 +113,7 @@ nnoremap <C-h> :bp<CR>
 nnoremap <C-l> :bn<CR>
 
 " Close with C-q
-nnoremap <C-x> :bd<CR>:bp<CR>
+nnoremap <C-x> :bd<CR>
 
 " Allow cursor keys in insert mode
 set esckeys
