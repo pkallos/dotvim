@@ -11,7 +11,7 @@ call vundle#rc()
 " required!
 Bundle 'gmarik/vundle'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'fholgado/minibufexpl.vim'
+" Bundle 'fholgado/minibufexpl.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-repeat'
@@ -19,9 +19,11 @@ Bundle 'vim-scripts/swap-parameters'
 Bundle 'brookhong/DBGPavim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'tomtom/tcomment_vim'
+Bundle 'thisivan/vim-bufexplorer'
 Bundle 'godlygeek/tabular'
 Bundle 'ack.vim'
 Bundle 'surround.vim'
+Bundle 'toggle.vim'
 
 syntax on
 " Ignore case in searches
@@ -38,8 +40,9 @@ set backspace=indent,eol,start
 set cursorline
 " Don't cry for me
 set visualbell
-" Don't cry for me
-set visualbell
+
+" Fuck swap files, can't wait for this to burn me
+set noswapfile
 
 " Use 4 space soft tabs, autoindent
 set smartindent
@@ -85,6 +88,10 @@ nnoremap <F2> :set nonumber!<CR>
 
 " Toggle paste mode with F3
 nnoremap <F3> :set invpaste paste?<CR>
+
+" select pasted text
+nnoremap gp `[v`]
+
 set pastetoggle=<F3>
 
 " Show current mode
@@ -156,3 +163,7 @@ set autoread
 let g:gitgutter_enabled = 1
 nnoremap <Leader>n :GitGutterNextHunk<CR>
 nnoremap <Leader>p :GitGutterPrevHunk<CR>
+
+" PHPDoc
+let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates"
+nnoremap <buffer> <Leader>d :call pdv#DocumentCurrentLine()<CR>
