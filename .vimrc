@@ -119,9 +119,6 @@ set hidden
 nnoremap <C-h> :bp<CR>
 nnoremap <C-l> :bn<CR>
 
-" Close with C-q
-nnoremap <C-x> :bd<CR>
-
 " Allow cursor keys in insert mode
 set esckeys
 
@@ -175,3 +172,4 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
+
