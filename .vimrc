@@ -120,9 +120,6 @@ set hidden
 nnoremap <C-h> :bp<CR>
 nnoremap <C-l> :bn<CR>
 
-" Close with C-q
-nnoremap <C-x> :bd<CR>
-
 " Allow cursor keys in insert mode
 set esckeys
 
@@ -168,3 +165,12 @@ nnoremap <Leader>p :GitGutterPrevHunk<CR>
 " PHPDoc
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates"
 nnoremap <buffer> <Leader>d :call pdv#DocumentCurrentLine()<CR>
+
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType c set omnifunc=ccomplete#Complete
+
