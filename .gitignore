@@ -4,5 +4,3 @@ Makefile
 ruby/
 .VimballRecord
 swaps
-bundle/*
-!bundle/vundle/
