@@ -3,5 +3,5 @@ Makefile
 .last_*
 ruby/
 .VimballRecord
-bundle/*
+bundle/**
 !bundle/vundle
