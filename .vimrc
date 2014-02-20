@@ -24,7 +24,6 @@ Bundle 'godlygeek/tabular'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'ack.vim'
 Bundle 'surround.vim'
-Bundle 'toggle.vim'
 
 syntax on
 " Ignore case in searches
@@ -41,9 +40,6 @@ set backspace=indent,eol,start
 set cursorline
 " Don't cry for me
 set visualbell
-
-" Fuck swap files, can't wait for this to burn me
-set noswapfile
 
 " Use 4 space soft tabs, autoindent
 set smartindent
