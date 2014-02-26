@@ -1,25 +1,20 @@
 set nocompatible
-filetype off
+filetype plugin indent on
 " Include GOROOT as path
 set rtp+=$GOROOT/misc/vim
 " Syntax highlighting
-set rtp+=/.vim/bundle/ctrlp.vim
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
 " required!
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-repeat'
-Bundle 'vim-scripts/swap-parameters'
-Bundle 'brookhong/DBGPavim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'thisivan/vim-bufexplorer'
-Bundle 'godlygeek/tabular'
-Bundle 'derekwyatt/vim-scala'
+Bundle 'pkallos/vim-scala'
 Bundle 'ack.vim'
 Bundle 'surround.vim'
 
@@ -68,9 +63,6 @@ if has("autocmd")
         autocmd BufRead,BufNewFile *.view set filetype=php
     augroup END
 endif
-
-" Open tag in new tab
-" map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! %!sudo tee > /dev/null %
@@ -144,10 +136,6 @@ if has("multi_byte")
   set fileencodings=ucs-bom,utf-8,latin1
 endif
 
-" Debug port
-let g:dbgPavimPort = 9000
-let g:dbgPavimBreakAtEntry = 0
-
 " Auto reload files on disk
 set autoread
 
@@ -155,10 +143,6 @@ set autoread
 let g:gitgutter_enabled = 1
 nnoremap <Leader>n :GitGutterNextHunk<CR>
 nnoremap <Leader>p :GitGutterPrevHunk<CR>
-
-" PHPDoc
-let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates"
-nnoremap <buffer> <Leader>d :call pdv#DocumentCurrentLine()<CR>
 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
