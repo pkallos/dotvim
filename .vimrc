@@ -1,5 +1,4 @@
 set nocompatible
-filetype plugin indent on
 " Include GOROOT as path
 set rtp+=$GOROOT/misc/vim
 " Syntax highlighting
@@ -14,11 +13,14 @@ Bundle 'tpope/vim-repeat'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'thisivan/vim-bufexplorer'
-Bundle 'pkallos/vim-scala'
+Bundle 'derekwyatt/vim-scala'
 Bundle 'ack.vim'
 Bundle 'surround.vim'
 
 syntax on
+filetype off
+filetype plugin indent on
+
 " Ignore case in searches
 set ignorecase
 " Highlight dynamically as pattern is typed
@@ -35,7 +37,7 @@ set cursorline
 set visualbell
 
 " Use 4 space soft tabs, autoindent
-set smartindent
+set autoindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -66,9 +68,6 @@ endif
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! %!sudo tee > /dev/null %
-
-" Select pasted text
-nnoremap gp `[v`]
 
 " Toggle line numbers with F2
 nnoremap <F2> :set nonumber!<CR>
