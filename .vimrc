@@ -13,7 +13,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'thisivan/vim-bufexplorer'
-Bundle 'derekwyatt/vim-scala'
+Bundle 'pkallos/vim-scala'
 Bundle 'ack.vim'
 Bundle 'surround.vim'
 
