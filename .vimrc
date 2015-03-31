@@ -2,12 +2,12 @@ set nocompatible
 " Include GOROOT as path
 set rtp+=$GOROOT/misc/vim
 " Syntax highlighting
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-repeat'
 Bundle 'airblade/vim-gitgutter'
@@ -16,6 +16,7 @@ Bundle 'thisivan/vim-bufexplorer'
 Bundle 'pkallos/vim-scala'
 Bundle 'ack.vim'
 Bundle 'surround.vim'
+Bundle 'nanotech/jellybeans.vim'
 
 syntax on
 filetype off
