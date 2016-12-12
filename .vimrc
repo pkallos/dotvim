@@ -31,7 +31,8 @@ set hlsearch
 " Number lines by default
 set number
 " Allow backspace in insert mode
-set backspace=indent,eol,start
+" set backspace=indent,eol,start
+set backspace=2
 " Highlight current line
 set cursorline
 " Don't cry for me
