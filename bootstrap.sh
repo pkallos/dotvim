@@ -7,6 +7,7 @@ mv $HOME/.vimrc $HOME/.vimrc.`date +"%T"`.bak
 
 mkdir -p ~/.vim/swaps
 mkdir -p ~/.vim/undo
+mkdir -p ~/.vim/backups
 
 ln -nsf $DIR/.vimrc $HOME/.vimrc
 vim +BundleInstall +qall
